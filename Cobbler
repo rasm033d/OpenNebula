@@ -10,10 +10,10 @@ reboot
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
 
 //1
-sed -i 's/server: 127.0.0.1/server: 172.16.11.8/' /etc/cobbler/settings
+sed -i 's/server: 127.0.0.1/server: 172.16.11.10/' /etc/cobbler/settings
 
 //2
-sed -i 's/next_server: 127.0.0.1/next_server: 172.16.11.8/' /etc/cobbler/settings
+sed -i 's/next_server: 127.0.0.1/next_server: 172.16.11.10/' /etc/cobbler/settings
 
 //3
 cobbler get-loaders
@@ -45,3 +45,11 @@ sed -i 's/@arches="i386";/# @arches="i386";/' /etc/debmirror.conf
 ///DHCP
 sed -i 's/manage_dhcp: 0/manage_dhcp: 1/' /etc/cobbler/settings
 https://imgur.com/a/LcTeBAe
+
+//Import
+mkdir /media/iso
+mount /dev/sr<> /media/iso
+
+cobbler import --arch=x86_64 --path=/media/iso --name=Debian10
+
+cobbler system add --name=Server1 --profile=Debian10-x86_64
