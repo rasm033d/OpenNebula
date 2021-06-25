@@ -28,10 +28,11 @@ d-i passwd/root-login boolean false
 
 # To create a normal user account.
 d-i passwd/user-fullname string itadmin
-d-i passwd/username string Asdf1234!
+d-i passwd/username string itadmin
 
 # Normal user's password, either with sha512sum
-#d-i passwd/user-password-crypted password [crypt(3) hash]
+d-i passwd/user-password Asdf1234! insecure
+d-i passwd/user-password-again Asdf1234! insecure
 
 ### Clock and time zone setup
 # Controls whether or not the hardware clock is set to UTC.
