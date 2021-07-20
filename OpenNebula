@@ -1,0 +1,2 @@
+wget 'https://github.com/OpenNebula/minione/releases/latest/download/minione'
+bash minione --password Asdf1234!
