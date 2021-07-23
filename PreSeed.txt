@@ -1,3 +1,5 @@
+//outdated, brug den på TFTP VM i stedet for.
+
 ## Custom Preseed
 # Localization
 d-i debian-installer/locale string en_US
