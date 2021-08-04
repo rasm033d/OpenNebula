@@ -6,3 +6,5 @@ mkdir /home/itadmin/.one
 echo "oneadmin:Asdf1234!" > /home/itadmin/.one/one_auth
 systemctl restart opennebula-sunstone.service
 systemctl restart opennebula.service
+apt-get -y install opennebula-node-kvm
+systemctl restart libvirtd
