@@ -1,4 +1,5 @@
 #!/bin/bash
+//HOST NEEDS TO BE NAMED "OpenNebula" OR ELSE IT WONT WORK!!!!!!!!!!!!!!!!!!!!!!!
 wget 'https://github.com/OpenNebula/minione/releases/latest/download/minione'
 bash minione --password Asdf1234!
 bash minione --frontend
