@@ -122,4 +122,7 @@ d-i grub-installer/with_other_os boolean true
 # determined safely in general, so this needs to be specified:
 d-i grub-installer/bootdev string /dev/sda
 # To install to the first device (assuming it is not a USB stick):
-d-i grub-installer/bootdev string default
+# d-i grub-installer/bootdev string default
+
+# Avoid "installtion complete" message:
+d-i prebaseconfig/reboot_in_progress note
