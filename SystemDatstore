@@ -1,0 +1,3 @@
+NAME    = local_system
+TM_MAD  = ssh
+TYPE    = SYSTEM_DS
