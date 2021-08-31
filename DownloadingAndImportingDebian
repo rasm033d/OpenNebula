@@ -1,0 +1,12 @@
+wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.0.0-amd64-netinst.iso
+
+NAME   = Debian
+MEMORY = 1024
+CPU    = 2
+
+DISK = [ IMAGE  = "Debian" ]
+DISK = [ TYPE     = swap,
+         SIZE     = 1024 ]
+
+GRAPHICS = [
+  TYPE    = "vnc"]
