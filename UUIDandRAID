@@ -1,0 +1,8 @@
+#have to copy the UUID manually
+bcache-super-show /dev/sda | grep cset
+echo <UUID0> > /sys/block/bcache0/bcache/attach
+echo <UUID1> > /sys/block/bcache1/bcache/attach
+echo <UUID2> > /sys/block/bcache2/bcache/attach
+echo <UUID3> > /sys/block/bcache3/bcache/attach
+#then RAID
+mkfs.btrfs -L storage -f -d raid0 -m raid0 /dev/bcache0 /dev/bcache1 /dev/bcache2 /dev/bcache3
