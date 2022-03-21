@@ -1,0 +1,4 @@
+#going to have to manually input the IDs
+ln -s /storage/datastores/<ID1> /var/lib/one/datastores/<ID1>
+ln -s /storage/datastores/<ID2> /var/lib/one/datastores/<ID2>
+ln -s /storage/datastores/<ID3> /var/lib/one/datastores/<ID3>
