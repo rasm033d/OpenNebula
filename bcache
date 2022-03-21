@@ -1,0 +1,10 @@
+#wipefs -a /dev/sda
+#wipefs -a /dev/sdb
+#wipefs -a /dev/sdc
+#wipefs -a /dev/sdd
+#wipefs -a /dev/sde
+#wipefs -a /dev/sdf
+#wipefs -a /dev/sdg
+#wipefs -a /dev/sdh
+make-bcache -C /dev/sda /dev/sdb /dev/sdc /dev/sdd
+make-bcache -B /dev/sde /dev/sdf /dev/sdg /dev/sdh
